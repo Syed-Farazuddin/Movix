@@ -55,8 +55,7 @@ function Header() {
     setMobileMenu(false);
   };
   const searchQueryHandler = (event) => {
-    if (event.key === "Enter" && query.length > 0) {
-      console.log("Search hit");
+    if ((event.key === "Enter" || event.keycode === 13) && query.length > 0) {
       Navigate(`/search/${query}`);
       setTimeout(() => {
         setShowSearch(false);
