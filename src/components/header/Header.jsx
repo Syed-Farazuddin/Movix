@@ -12,7 +12,7 @@ function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [query, setQuery] = useState("");
   const [showSearch, setShowSearch] = useState("");
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function Header() {
     setShowSearch(false);
   };
   const navigationHandler = (type) => {
-    navigate(`/explore/${type}`);
+    Navigate(`/explore/${type}`);
     setMobileMenu(false);
   };
   const closeMobileMenu = () => {
@@ -70,7 +70,7 @@ function Header() {
         <div
           className="logo"
           onClick={() => {
-            navigate("/");
+            Navigate("/");
           }}
         >
           <img src={logo} alt="" />
